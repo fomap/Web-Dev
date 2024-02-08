@@ -14,7 +14,7 @@
 }
 
 .rightdummy {
-    background-color: black;
+    background-color: red;
     width: 700px;
     display: inline-block;
 }
@@ -28,8 +28,21 @@
     margin-top: 250px;
     margin-left: 50px;
     display: flex;
+  
 }
 
+
+
+.stuffright {
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    height: 350px;
+    width: 350px;
+    margin-left: 50px;
+    padding: 14px 16 px;
+
+}
 #facebooklogo{
     max-width: 300px;
 }
@@ -44,7 +57,28 @@ h1 {
     background-color: aquamarine;
 }
 
+.randomstuff li {
+    
+    display: inline-block;
+    margin-left: 15px;
+    background-color: blueviolet;
+} 
+
 .line {
     border-top: 1px solid red;
     max-width: 900px;
+}
+
+
+#loginbtn {
+    background-color: aqua;
+    width: 200px;
+    height: 150px;
+}
+
+.footer{
+    padding-left: 500px;
+    width: 900px;
+    height: 500px;
+    text-align: center;
 }
