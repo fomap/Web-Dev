@@ -37,3 +37,14 @@
 h1 {
     max-width: 500px;
 }
+
+.languages li{
+    display: inline-block;
+    margin-left: 50px;
+    background-color: aquamarine;
+}
+
+.line {
+    border-top: 1px solid red;
+    max-width: 900px;
+}
