@@ -1,0 +1,30 @@
+.content {
+    background-color: #F2F3F5;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 700px;
+}
+
+.leftdummy {
+    background-color:red;
+    width: 25%;
+   display: inline-block;
+    
+}
+
+#faco
+
+.rightdummy {
+    background-color: black;
+    width: 25%;
+    display: inline-block;
+}
+
+.leftcontent {
+    display: flex;
+}
+
+.rightcontent {
+    display: flex;
+}
