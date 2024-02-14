@@ -7,24 +7,82 @@
 }
 
 .leftdummy {
-    background-color:red;
-    width: 25%;
+    background-color:black;
+    width: 450px;
    display: inline-block;
     
 }
 
-#faco
-
 .rightdummy {
-    background-color: black;
-    width: 25%;
+    background-color: red;
+    width: 700px;
     display: inline-block;
 }
 
 .leftcontent {
+    margin-top: 250px;
     display: flex;
 }
 
 .rightcontent {
+    margin-top: 250px;
+    margin-left: 50px;
     display: flex;
+  
+}
+
+#welcome{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+
+.stuffright {
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    height: 350px;
+    width: 350px;
+    margin-left: 50px;
+    padding: 14px 16 px;
+
+}
+#facebooklogo{
+    max-width: 300px;
+}
+
+h1 {
+    max-width: 500px;
+}
+
+.languages li{
+    display: inline-block;
+    margin-left: 50px;
+    background-color: aquamarine;
+}
+
+.randomstuff li {
+    
+    display: inline-block;
+    margin-left: 15px;
+    background-color: blueviolet;
+} 
+
+.line {
+    border-top: 1px solid red;
+    max-width: 900px;
+}
+
+
+#loginbtn {
+    background-color: aqua;
+    width: 200px;
+    height: 150px;
+}
+
+.footer{
+    padding-left: 500px;
+    width: 900px;
+    height: 500px;
+    text-align: center;
 }
