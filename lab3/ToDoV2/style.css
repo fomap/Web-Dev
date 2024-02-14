@@ -1,0 +1,14 @@
+fieldset{
+    font-size: 30px;
+}
+
+fieldset label{
+    margin-right: 10px;
+}
+fieldset input{
+    font-size: 30px;
+}
+fieldset button{
+    font-size: 30px;
+  
+}
