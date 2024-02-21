@@ -1,30 +1,85 @@
-<h2>Products</h2>
 
-<div *ngFor="let product of products">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <!-- <link href="product-list-component.css" rel="stylesheet"> -->
     
-    <h3>
-        <a [title]="product.name + ' details'">
-            {{ product.name }}
-        </a>
+</head>
+<body>
     
-    </h3>
+    <div class="main">
 
-    <p *ngIf="product.description">
-        Description: {{ product.description }}
+        <h2>Products</h2>
+
+<!-- 
+        <div class="container">
+            
+        </div> -->
+        
+        <div *ngFor="let product of products" class="grid">
+
+            <div class="content">
+                
+                <h3>
+                    <a [title]="product.description">
+                        {{ product.name }}
+                    </a>
+                </h3>
+            
+                <div class="text">
+                    <p *ngIf="product.description">
+                        <a href=" {{ product.link}}" target="_blank"> Description: {{ product.description }}</a>
+                    </p>
+
+                </div>
+                
+            
+                <p *ngIf="product.image">
+                    <img src= "{{ product.image }}" height="300">            
+                </p>
+            
+                <a href="https://wa.me/77017219758" target="_blank" id="btn">  Share
+
+                   
+
+                </a>
+
+                 <!-- <button type="button" (click)="share()">
+                        SHARE HERE
+                 </button> -->
+                
+            
+
+            </div>
+
+        <!-- <app-product-alerts
+            [product]="product" 
+            (notify)="onNotify()">
+        </app-product-alerts> -->    
+        </div>
+        
+
+    </div>
     
-    </p>
 
-    <button type="button" (click)="share()">
-        Share
-    </button>
+    <div class="footer">
 
-    <app-product-alerts
-        [product]="product" 
-        (notify)="onNotify()">
-    </app-product-alerts>
+        <div class="footer-container">
+            <h1> PLEASE HAVE MERCY</h1>
+            <img src="https://ih1.redbubble.net/image.5065733096.9927/st,small,845x845-pad,1000x1000,f8f8f8.u2.jpg" height="300" width="700">
 
+        </div>
 
-</div>
+        
+
+    </div>
+
+</body>
+</html>
+
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
