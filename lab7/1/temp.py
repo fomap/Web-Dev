@@ -1,7 +1,7 @@
 n = int(input())
-zero = 0
-for i in range(n):
-    number =  int(input())
-    if number == 0:
-        zero += 1
-print(zero)
+sum = 1
+k = 0
+while n > sum:
+    sum *= 2
+    k += 1
+print(k)
