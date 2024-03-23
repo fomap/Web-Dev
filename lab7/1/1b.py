@@ -1,39 +1,39 @@
-# a = int(input(""))
-# b = int(input(""))
+a = int(input(""))
+b = int(input(""))
 
-# if a >= b:
-#     print(a)
-# elif a <= b:
-#     print(b)
-
-
-# import calendar
-# n = int(input(""))
-# if (calendar.isleap(n)):
-#     print("YES")
-# else:
-#     print("NO")
+if a >= b:
+    print(a)
+elif a <= b:
+    print(b)
 
 
-# a = int(input())
-# b =  int(input())
-
-# if(a != 1 and b != 1):
-#     print("YES")
-# elif(a == 1 and b == 1):
-#     print("YES")
-# else:
-#     print("NO")
+import calendar
+n = int(input(""))
+if (calendar.isleap(n)):
+    print("YES")
+else:
+    print("NO")
 
 
-# val = int(input())
+a = int(input())
+b =  int(input())
 
-# if val > 0:
-#     print(1)
-# elif val < 0:
-#     print(-1)
-# else:
-#     print(0)
+if(a != 1 and b != 1):
+    print("YES")
+elif(a == 1 and b == 1):
+    print("YES")
+else:
+    print("NO")
+
+
+val = int(input())
+
+if val > 0:
+    print(1)
+elif val < 0:
+    print(-1)
+else:
+    print(0)
 
 
 val1= int(input())
