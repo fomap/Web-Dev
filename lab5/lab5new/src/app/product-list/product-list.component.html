@@ -1,12 +1,11 @@
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Shop</title>
-    <!-- <link href="product-list-component.css" rel="stylesheet"> -->
-    
+       
 </head>
 <body>
     
@@ -14,11 +13,7 @@
 
         <h2>Products</h2>
 
-<!-- 
-        <div class="container">
-            
-        </div> -->
-        
+
         <div *ngFor="let product of products" class="grid">
 
             <div class="content">
@@ -47,18 +42,11 @@
 
                 </a>
 
-                 <!-- <button type="button" (click)="share()">
-                        SHARE HERE
-                 </button> -->
-                
+              
             
 
             </div>
-
-        <!-- <app-product-alerts
-            [product]="product" 
-            (notify)="onNotify()">
-        </app-product-alerts> -->    
+  
         </div>
         
 
@@ -78,7 +66,24 @@
     </div>
 
 </body>
-</html>
+</html> -->
+
+
+
+
+<h2>Products</h2>
+<button type="button" (click)="onSelect('camus')">Albert Camus</button>
+<button type="button" (click)="onSelect('christie')"
+style="margin-left: 20px;"> Agatha Christie </button>
+<button type="button" (click)="onSelect('dostoevsky')"
+style="margin-left: 20px;">Fyodor Dostoevsky</button>
+<button type="button" (click)="onSelect('murakami')"
+style="margin-left: 20px;">Haruki Murakami</button>
+
+
+<app-product-item [selectedProduct]="selectedProduct"></app-product-item>
+
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
