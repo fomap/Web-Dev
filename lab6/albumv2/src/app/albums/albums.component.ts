@@ -13,48 +13,41 @@ export class AlbumsComponent implements OnInit {
   albums!: Albums[];
   loaded: boolean = false;
   newAlbum: Albums;
-
+  lastId = 100;
 
 
   constructor(private albumService: AlbumService)
   {
     this.newAlbum = {
       userId: 10,
-      id: 0,
+      id: this.lastId,
       title: "",
     };
   }
 
   ngOnInit(): void {
-    this.getAlbums();
+    // this.getAlbums();
+    this.albumService.getAlbums().subscribe(album =>{
+      this.albums = album;
+      // console.log(album);
+    })
   }
 
 
-  addAlbums()
+  addAlbum()
   {
-    this.albumService.createAlbum(this.newAlbum).subscribe( (album) => {
-      this.newAlbum.id = this.newAlbum.id + 1;
-      this.albums.push(album);
-    });
+    this.albumService.createAlbum(this.newAlbum).subscribe(post=>{
+      this.albums.push(this.newAlbum);
+      this.newAlbum = {} as Albums;
+    })
   }
 
-  getAlbums()
-  {
-    // this.albums = ALBUMS;
-    this.loaded = false;
-    this.albumService.getAlbums().subscribe((albums) => {
-      this.albums = albums;
-      this.loaded = true;
-    });
-
-  }
 
   deleteAlbum(id: number)
   {
-    this.albums = this.albums.filter( (p) => p.id !== id);
-    this.albumService.deleteAlbum(id).subscribe(() =>
-    {
-      console.log("deleted");
+      this.albumService.deleteAlbum(id).subscribe(() =>{
+      this.albums = this.albums.filter(p => p.id !== id);
+      this.lastId -= 1;
     });
   }
 

@@ -13,7 +13,7 @@ import { subscribe } from 'diagnostics_channel';
 })
 export class AlbumDetailComponent  implements OnInit{
   album !: Albums;
-  photos!: Photos[];
+  newTitle: string = '';
 
   constructor(private route: ActivatedRoute,
               private albumService: AlbumService
@@ -25,11 +25,27 @@ export class AlbumDetailComponent  implements OnInit{
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       const albumId = Number(params.get("albumId"));
-      this.album = ALBUMS.find((album) => album.id === albumId) as Albums;
+     
+     // this.album = ALBUMS.find((album) => album.id === albumId) as Albums;
       this.albumService.getAlbum(albumId).subscribe((album) => {
         this.album = album;
       });
     })
   }
 
+  updateTitle(){
+    
+    this.album.title = this.newTitle;
+    this.newTitle = '';
+    this.albumService.updateTitle(this.album).subscribe(album =>{
+      console.log('title is updated!');
+    })
+  }
+
+  getPhotosById(id:number){
+    this.albumService.getPhotosById(id).subscribe(photo =>{
+      console.log(photo);
+      
+    })
+  }
 }
